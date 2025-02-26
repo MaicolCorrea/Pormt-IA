@@ -44,10 +44,6 @@ AI Chat Assistant es una aplicación web que utiliza la API de Cohere AI para ge
    http://localhost:3000
    ```
 
-## 🌐 Prueba la Aplicación
-Puedes probar la aplicación en la siguiente URL:  
-[🔗 Ver Demo][(https://pormt-ia.onrender.com)]
-
 ## 📜 Licencia
 Este proyecto está bajo la licencia MIT. Consulta el archivo `LICENSE` para más detalles.
 
