@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat Assistant</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Chat Assistant</h1>
+            <p class="subtitle">Powered by Cohere AI</p>
+        </header>
+
+        <main>
+            <div class="chat-container">
+                <div class="input-area">
+                    <textarea 
+                        id="prompt" 
+                        placeholder="Escribe tu pregunta aquí..."
+                        rows="3"
+                    ></textarea>
+                    <button id="generate">
+                        <span class="button-text">Enviar</span>
+                        <div class="loader"></div>
+                    </button>
+                </div>
+                <div class="output-container">
+                    <p id="output"></p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="docs-section">
+                <h3>Tecnologías Utilizadas:</h3>
+                <ul>
+                    <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
+                    <li><strong>Backend:</strong> Node.js, Express</li>
+                    <li><strong>API:</strong> Cohere AI para generación de texto</li>
+                </ul>
+                <p class="note">Este proyecto utiliza la API de Cohere para generar respuestas inteligentes a tus preguntas.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="/app.js"></script>
+</body>
+</html>
