@@ -136,3 +136,185 @@ button:disabled .loader {
     font-style: italic;
     color: #6b7280;
 }
+
+/* Nuevos estilos */
+.theme-switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.theme-switch button {
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.chat-history {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    background: #f8fafc;
+}
+
+.message {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    animation: fadeIn 0.3s ease;
+}
+
+.user-message {
+    background: var(--primary-color);
+    color: white;
+    margin-left: 20%;
+}
+
+.ai-message {
+    background: white;
+    border: 1px solid #e5e7eb;
+    margin-right: 20%;
+}
+
+.message-time {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-top: 0.5rem;
+}
+
+.typing-indicator {
+    display: inline-flex;
+    gap: 4px;
+    margin: 10px 0;
+}
+
+.typing-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    animation: typing 1s infinite;
+}
+
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typing {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.dark-theme {
+    --background-color: #1a1a1a;
+    --text-color: #ffffff;
+    --primary-color: #3b82f6;
+    --secondary-color: #60a5fa;
+}
+
+.dark-theme .chat-container {
+    background: #2d2d2d;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .chat-history {
+    background: #222222;
+}
+
+.dark-theme .ai-message {
+    background: #333333;
+    border-color: #404040;
+    color: #ffffff;
+}
+
+.dark-theme textarea {
+    background: #333333;
+    border-color: #404040;
+    color: #ffffff;
+}
+
+.dark-theme .docs-section {
+    background: #2d2d2d;
+    color: #ffffff;
+}
+
+.dark-theme .suggestion-chip {
+    background: #333333;
+    color: #ffffff;
+}
+
+.dark-theme .suggestion-chip:hover {
+    background: var(--primary-color);
+}
+
+.dark-theme .char-count {
+    color: #9ca3af;
+}
+
+.dark-theme .message-time {
+    color: #9ca3af;
+}
+
+.suggestions {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.suggestion-chip {
+    background: #e5e7eb;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    animation: slideIn 0.3s ease;
+    opacity: 1;
+    transform-origin: left;
+}
+
+.suggestion-chip:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.suggestion-chip.removing {
+    animation: slideOut 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+}
+
+.char-count {
+    font-size: 0.8rem;
+    color: #6b7280;
+    text-align: right;
+    margin-top: 0.25rem;
+}

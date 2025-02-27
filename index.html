@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+    <div class="theme-switch">
+        <button id="themeToggle">🌙</button>
+    </div>
+    
     <div class="container">
         <header>
             <h1>AI Chat Assistant</h1>
@@ -15,19 +19,29 @@
 
         <main>
             <div class="chat-container">
+                <div class="chat-history" id="chatHistory"></div>
+                
+                <div class="suggestions">
+                </div>
+
                 <div class="input-area">
                     <textarea 
                         id="prompt" 
                         placeholder="Escribe tu pregunta aquí..."
                         rows="3"
+                        maxlength="500"
                     ></textarea>
+                    <div class="char-count">0/500</div>
                     <button id="generate">
                         <span class="button-text">Enviar</span>
                         <div class="loader"></div>
                     </button>
                 </div>
-                <div class="output-container">
-                    <p id="output"></p>
+                
+                <div class="typing-indicator" style="display: none;">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
                 </div>
             </div>
         </main>
