@@ -2,6 +2,12 @@
 
 ![AI Chat Assistant](https://your-image-url.com/banner.png)  
 
+## 📋 Link de acceso al promt en una página:
+- Debido a que el hosh es gratuito, no carga a la velocidad optima.
+  ```sh
+  https://pormt-ia.onrender.com
+  ```
+
 AI Chat Assistant es una aplicación web que utiliza la API de Cohere AI para generar respuestas inteligentes a preguntas de los usuarios.
 
 ## 🚀 Características
